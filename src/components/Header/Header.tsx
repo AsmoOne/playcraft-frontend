@@ -6,11 +6,11 @@ export const Header = () => {
     <div className="flex">
       <Logo />
 
-      <Button>
+      <Button variant="primary">
         Donate
       </Button>
 
-      <Button>
+      <Button variant="secondary">
         Volunteer
       </Button>
     </div>

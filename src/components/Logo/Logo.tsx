@@ -4,9 +4,9 @@ type PropsT = {
 
 export const Logo = ({ size = 'small' }: PropsT) => {
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center font-main">
       <img
-        src="/logo.png"
+        src="src\assets\logo.png"
         alt="logo icon"
         className={`${size === 'large' ? 'w-20' : 'w-12'}`}
       />
