@@ -1,12 +1,18 @@
+import { Link } from "../Link";
+
 type PropsT = {
   size?: 'small' | 'large',
+  rootClassNames?: string,
 };
 
-export const Logo = ({ size = 'small' }: PropsT) => {
+export const Logo = ({
+  size = 'large',
+  rootClassNames,
+ }: PropsT) => {
   return (
-    <div className="flex gap-4 items-center font-main">
+    <Link to="/" rootClassNames={`flex gap-4 items-center font-main ${rootClassNames}`}>
       <img
-        src="src\assets\logo.png"
+        src="/assets/logo.png"
         alt="logo icon"
         className={`${size === 'large' ? 'w-20' : 'w-12'}`}
       />
@@ -14,6 +20,6 @@ export const Logo = ({ size = 'small' }: PropsT) => {
       <p className="text-2xl">
         Playcraft
       </p>
-    </div>
+    </Link>
   )
 }
