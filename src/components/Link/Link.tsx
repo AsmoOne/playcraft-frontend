@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 type PropsT = {
   children: React.ReactNode,
   to: string,
