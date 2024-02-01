@@ -6,7 +6,7 @@ type PropsT = {
   rootClassNames?: string,
 };
 
-const baseClassNames = 'font-main text-base text-white hover:text-primary transition-all';
+const baseClassNames = 'flex items-center font-main text-base text-white hover:text-primary transition-all';
 
 export const Link = ({
   children,
@@ -17,24 +17,13 @@ export const Link = ({
   ...restProps
  }: PropsT) => {
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    //TODO: do it using refs
     const target = e.target as HTMLAnchorElement;
-    if (target.tagName === 'A') {
-      const img = target.querySelector('img');
-      if (img) {
-        img.style.transform = 'rotate(180deg)';
-      }
-    }
+    //TODO: Dropdown should be opened only if mouse enters the link
   }
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const target = e.target as HTMLAnchorElement;
-    if (target.tagName === 'A') {
-      const img = target.querySelector('img');
-      if (img) {
-        img.style.transform = 'rotate(0deg)';
-      }
-    }
+    //TODO: Dropdown should be closed only if mouse leaves the link
   }
 
   return (
@@ -43,7 +32,7 @@ export const Link = ({
       target={target}
       className={`
         ${baseClassNames}
-        ${withDropdown ? 'flex gap-2 items-center' : ''}
+        ${withDropdown ? 'gap-2' : ''}
         ${rootClassNames}
       `}
       onMouseEnter={handleMouseEnter}

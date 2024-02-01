@@ -1,18 +1,22 @@
 import { Button } from "../Button";
+import { Container } from "../Layout/Container";
 import { Logo } from "../Logo";
+import { Navigation } from "./components/Navigation";
 
 export const Header = () => {
   return (
-    <div className="flex">
-      <Logo />
+    <Container>
+      <div className="flex bg-black justify-between">
+        <Logo size="small" />
 
-      <Button variant="primary">
-        Donate
-      </Button>
+        <div className="flex gap-16">
+          <Navigation />
 
-      <Button variant="secondary">
-        Volunteer
-      </Button>
-    </div>
+          <Button variant="primary">
+            Вхід
+          </Button>
+        </div>
+      </div>
+    </Container>
   )
 }
