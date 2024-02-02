@@ -12,6 +12,14 @@ export default {
       fontFamily: {
         'main': ['UpheavalPro', 'sans-serif']
       },
+      container: {
+        padding: {
+          DEFAULT: '1.25rem',
+          sm: '2.5rem',
+          lg: '7.5rem',
+          xl: '8.75rem',
+        }
+      }
     },
   },
   plugins: [],

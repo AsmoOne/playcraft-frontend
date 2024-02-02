@@ -4,7 +4,7 @@ type PropsT = {
 
 export const Container = ({ children }: PropsT) => {
   return (
-    <div className="container mx-auto px-36">
+    <div className="container mx-auto">
       { children }
     </div>
   )
