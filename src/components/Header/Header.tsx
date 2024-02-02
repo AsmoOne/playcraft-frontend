@@ -6,7 +6,7 @@ import { Navigation } from "./components/Navigation";
 export const Header = () => {
   return (
     <Container>
-      <div className="flex bg-black justify-between">
+      <div className="flex justify-between py-10">
         <Logo size="small" />
 
         <div className="flex gap-16">

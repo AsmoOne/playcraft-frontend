@@ -6,7 +6,7 @@ type PropsT = {
   rootClassNames?: string,
 };
 
-const baseClassNames = 'flex items-center font-main text-base text-white hover:text-primary transition-all';
+const baseClassNames = 'flex items-center text-base text-white hover:text-primary transition-all';
 
 export const Link = ({
   children,

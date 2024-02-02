@@ -9,6 +9,10 @@ export default {
       colors: {
         'primary': '#F1D204'
       },
+      fontSize: {
+        'h1-desktop': '100px',
+        'h1-mobile': '52px',
+      },
       fontFamily: {
         'main': ['UpheavalPro', 'sans-serif']
       },
@@ -19,7 +23,10 @@ export default {
           lg: '7.5rem',
           xl: '8.75rem',
         }
-      }
+      },
+      backgroundImage: {
+        'intro-background': "url('/assets/background.png')",
+      },
     },
   },
   plugins: [],

@@ -1,9 +1,13 @@
 import { Header } from '../../components/Header';
+import { Intro } from './sections/Intro';
 
 export const Landing = () => {
   return (
     <>
-      <Header />
+      <div className='font-main bg-intro-background bg-cover h-[100vh]'>
+        <Header />
+        <Intro />
+      </div>
     </>
   )
 }

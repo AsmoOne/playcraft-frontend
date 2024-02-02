@@ -1,10 +1,13 @@
+import { ReactNode } from 'react';
+
 type PropsT = {
-  children: React.ReactNode,
+  children: ReactNode,
+  rootClassNames?: string,
 };
 
-export const Container = ({ children }: PropsT) => {
+export const Container = ({ children, rootClassNames }: PropsT) => {
   return (
-    <div className="container mx-auto">
+    <div className={`${'container mx-auto'} ${rootClassNames}`}>
       { children }
     </div>
   )
