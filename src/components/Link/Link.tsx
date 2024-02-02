@@ -6,7 +6,7 @@ type PropsT = {
   rootClassNames?: string,
 };
 
-const baseClassNames = 'font-main text-base text-white hover:text-primary transition-all';
+const baseClassNames = 'flex items-center font-main text-base text-white hover:text-primary transition-all';
 
 export const Link = ({
   children,
@@ -16,26 +16,6 @@ export const Link = ({
   rootClassNames,
   ...restProps
  }: PropsT) => {
-  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    //TODO: do it using refs
-    const target = e.target as HTMLAnchorElement;
-    if (target.tagName === 'A') {
-      const img = target.querySelector('img');
-      if (img) {
-        img.style.transform = 'rotate(180deg)';
-      }
-    }
-  }
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const target = e.target as HTMLAnchorElement;
-    if (target.tagName === 'A') {
-      const img = target.querySelector('img');
-      if (img) {
-        img.style.transform = 'rotate(0deg)';
-      }
-    }
-  }
 
   return (
     <a
@@ -43,11 +23,9 @@ export const Link = ({
       target={target}
       className={`
         ${baseClassNames}
-        ${withDropdown ? 'flex gap-2 items-center' : ''}
+        ${withDropdown ? 'gap-2' : ''}
         ${rootClassNames}
       `}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       {...restProps}
     >
       { children }

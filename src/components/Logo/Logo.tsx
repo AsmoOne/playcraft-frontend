@@ -1,12 +1,12 @@
 import { Link } from "../Link";
 
 type PropsT = {
-  size?: 'small' | 'large',
+  size: 'small' | 'large',
   rootClassNames?: string,
 };
 
 export const Logo = ({
-  size = 'large',
+  size,
   rootClassNames,
  }: PropsT) => {
   return (
