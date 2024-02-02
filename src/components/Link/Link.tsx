@@ -16,15 +16,6 @@ export const Link = ({
   rootClassNames,
   ...restProps
  }: PropsT) => {
-  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const target = e.target as HTMLAnchorElement;
-    //TODO: Dropdown should be opened only if mouse enters the link
-  }
-
-  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const target = e.target as HTMLAnchorElement;
-    //TODO: Dropdown should be closed only if mouse leaves the link
-  }
 
   return (
     <a
@@ -35,8 +26,6 @@ export const Link = ({
         ${withDropdown ? 'gap-2' : ''}
         ${rootClassNames}
       `}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       {...restProps}
     >
       { children }
