@@ -1,22 +1,26 @@
-import { Button } from "../Button";
+import { useState } from "react";
+
 import { Container } from "../Layout/Container";
 import { Logo } from "../Logo";
 import { Navigation } from "./components/Navigation";
+import { Burger } from "./components/Burger";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleClick = () => setIsOpen(!isOpen);
+
   return (
-    <Container>
-      <div className="flex justify-between py-10">
-        <Logo size="small" />
+    <header>
+      <Container>
+        <div className="flex justify-between py-10">
+          <Logo size="small" />
 
-        <div className="flex gap-16">
-          <Navigation />
+          <Navigation isOpen={isOpen} />
 
-          <Button variant="primary">
-            Вхід
-          </Button>
+          <Burger onClick={toggleClick} isOpen={isOpen} />
         </div>
-      </div>
-    </Container>
+      </Container>
+    </header>
   )
 }
