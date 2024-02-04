@@ -4,9 +4,12 @@ import { Container } from "../Layout/Container";
 import { Logo } from "../Logo";
 import { Navigation } from "./components/Navigation";
 import { Burger } from "./components/Burger";
+import { useBreakpoints } from "../../hooks/useBreakpoints";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { isMdScreen } = useBreakpoints();
 
   const toggleClick = () => setIsOpen(!isOpen);
 
@@ -18,7 +21,7 @@ export const Header = () => {
 
           <Navigation isOpen={isOpen} />
 
-          <Burger onClick={toggleClick} isOpen={isOpen} />
+          {!isMdScreen && <Burger onClick={toggleClick} isOpen={isOpen} />}
         </div>
       </Container>
     </header>
