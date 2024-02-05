@@ -15,6 +15,8 @@ export default {
       fontSize: {
         'h1-desktop': '100px',
         'h1-mobile': '52px',
+        'h3-desktop': '24px',
+        'h3-mobile': '20px',
       },
       fontFamily: {
         'main': ['UpheavalPro', 'sans-serif']

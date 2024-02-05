@@ -14,16 +14,14 @@ export const Header = () => {
   const toggleClick = () => setIsOpen(!isOpen);
 
   return (
-    <header className="select-none">
-      <Container>
-        <div className="flex justify-between py-10">
-          <Logo size="small" />
+    <Container type="header" rootClassNames="select-none">
+      <div className="flex justify-between py-10">
+        <Logo size="small" />
 
-          <Navigation isOpen={isOpen} />
+        <Navigation isOpen={isOpen} />
 
-          {!isMdScreen && <Burger onClick={toggleClick} isOpen={isOpen} />}
-        </div>
-      </Container>
-    </header>
+        {!isMdScreen && <Burger onClick={toggleClick} isOpen={isOpen} />}
+      </div>
+    </Container>
   )
 }
