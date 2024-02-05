@@ -14,7 +14,7 @@ export const Header = () => {
   const toggleClick = () => setIsOpen(!isOpen);
 
   return (
-    <header>
+    <header className="select-none">
       <Container>
         <div className="flex justify-between py-10">
           <Logo size="small" />
