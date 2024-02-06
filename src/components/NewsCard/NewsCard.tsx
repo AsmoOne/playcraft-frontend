@@ -13,7 +13,7 @@ export const NewsCard = () => {
         </div>
       </div>
 
-      <div className="bg-[#d9d9d9] w-full h-[150px] md:h-full rounded" />
+      <div className="bg-[#d9d9d9] w-full h-[150px] md:h-full rounded"/>
     </div>
   )
 }
