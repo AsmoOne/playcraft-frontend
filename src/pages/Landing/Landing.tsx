@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header';
 import { Intro } from './sections/Intro';
 import { News } from './sections/News';
+import { Players } from './sections/Players';
 
 export const Landing = () => {
   return (
@@ -9,8 +10,13 @@ export const Landing = () => {
         <Header />
         <Intro />
       </div>
-
-      <News />
+      <div className='flex justify-between'>
+        <News />
+        <div className='flex flex-col gap-20'>
+          <Players />
+          <Players />
+        </div>
+      </div>
     </>
   )
 }
