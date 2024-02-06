@@ -15,6 +15,8 @@ export default {
       fontSize: {
         'h1-desktop': '100px',
         'h1-mobile': '52px',
+        'h2-desktop': '32px',
+        'h2-mobile': '26px',
         'h3-desktop': '24px',
         'h3-mobile': '20px',
       },
