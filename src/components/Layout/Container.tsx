@@ -18,7 +18,7 @@ export const Container = ({ children, rootClassNames, type }: PropsT) => {
     </footer>
   )
   if (type === 'aside') return (
-    <aside className={`${'container mx-auto'} ${rootClassNames}`}>
+    <aside className={`${rootClassNames}`}>
       { children }
     </aside>
   )
