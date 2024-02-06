@@ -3,6 +3,7 @@ import { Container } from '../../components/Layout/Container';
 import { Intro } from './sections/Intro';
 import { News } from './sections/News';
 import { Players } from './sections/Players';
+import { BestWorks } from './sections/BestWorks';
 
 export const Landing = () => {
   return (
@@ -20,6 +21,8 @@ export const Landing = () => {
           <Players title='Топ донатерів' />
         </div>
       </Container>
+
+      <BestWorks />
     </>
   )
 }
