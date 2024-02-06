@@ -3,12 +3,28 @@ import { ReactNode } from 'react';
 type PropsT = {
   children: ReactNode,
   rootClassNames?: string,
+  type?: 'header' | 'footer' | 'aside',
 };
 
-export const Container = ({ children, rootClassNames }: PropsT) => {
-  return (
-    <div className={`${'container mx-auto'} ${rootClassNames}`}>
+export const Container = ({ children, rootClassNames, type }: PropsT) => {
+  if (type === 'header') return (
+    <header className={`${'container mx-auto'} ${rootClassNames}`}>
       { children }
-    </div>
+    </header>
+  )
+  if (type === 'footer') return (
+    <footer className={`${'container mx-auto'} ${rootClassNames}`}>
+      { children }
+    </footer>
+  )
+  if (type === 'aside') return (
+    <aside className={`${'container mx-auto'} ${rootClassNames}`}>
+      { children }
+    </aside>
+  )
+  return (
+    <section className={`${'container mx-auto'} ${rootClassNames}`}>
+      { children }
+    </section>
   )
 }
