@@ -1,6 +1,8 @@
 import { Header } from '../../components/Header';
+import { Container } from '../../components/Layout/Container';
 import { Intro } from './sections/Intro';
 import { News } from './sections/News';
+import { Players } from './sections/Players';
 
 export const Landing = () => {
   return (
@@ -10,7 +12,14 @@ export const Landing = () => {
         <Intro />
       </div>
 
-      <News />
+      <Container rootClassNames='flex flex-col xl:flex-row justify-between md:pt-20 gap-9 xl:gap-20'>
+        <News />
+
+        <div className='flex flex-col gap-20'>
+          <Players title='Топ гравців' />
+          <Players title='Топ донатерів' />
+        </div>
+      </Container>
     </>
   )
 }
