@@ -10,7 +10,8 @@ export default {
         "15": "60px",
       },
       colors: {
-        'primary': '#F1D204'
+        'primary': '#F1D204',
+        'secondary': '#FFAA00',
       },
       fontSize: {
         'h1-desktop': '100px',
