@@ -33,6 +33,7 @@ export default {
       },
       backgroundImage: {
         'intro-background': "url('/assets/background.png')",
+        'conclusion-background': "url('/assets/server-background.png')",
       },
     },
   },

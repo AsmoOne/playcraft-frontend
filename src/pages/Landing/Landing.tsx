@@ -4,6 +4,7 @@ import { Intro } from './sections/Intro';
 import { News } from './sections/News';
 import { Players } from './sections/Players';
 import { BestWorks } from './sections/BestWorks';
+import { Conclusion } from './sections/Conclusion';
 
 export const Landing = () => {
   return (
@@ -23,6 +24,8 @@ export const Landing = () => {
       </Container>
 
       <BestWorks />
+
+      <Conclusion />
     </>
   )
 }
