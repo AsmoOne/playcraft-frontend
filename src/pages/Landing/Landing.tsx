@@ -5,6 +5,7 @@ import { News } from './sections/News';
 import { Players } from './sections/Players';
 import { BestWorks } from './sections/BestWorks';
 import { Conclusion } from './sections/Conclusion';
+import { Footer } from './sections/Footer';
 
 export const Landing = () => {
   return (
@@ -26,6 +27,8 @@ export const Landing = () => {
       <BestWorks />
 
       <Conclusion />
+
+      <Footer />
     </>
   )
 }

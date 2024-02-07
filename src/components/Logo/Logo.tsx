@@ -2,11 +2,13 @@ import { Link } from "../Link";
 
 type PropsT = {
   size: 'small' | 'large',
+  textColor?: 'white' | 'black',
   rootClassNames?: string,
 };
 
 export const Logo = ({
   size,
+  textColor = 'white',
   rootClassNames,
  }: PropsT) => {
   return (
@@ -17,7 +19,7 @@ export const Logo = ({
         className={`${size === 'large' ? 'w-20' : 'w-12'}`}
       />
 
-      <p className="text-2xl">
+      <p className={`${"text-2xl"} text-${textColor}`}>
         Playcraft
       </p>
     </Link>
