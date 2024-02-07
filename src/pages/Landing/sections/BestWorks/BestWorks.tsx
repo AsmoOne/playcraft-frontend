@@ -46,7 +46,7 @@ export const BestWorks = () => {
 
       <div className="flex flex-wrap gap-16 lg:justify-center">
         {works.map((work, index) => (
-          <div key={index} className="w-full bg-slate-200 max-w-[500px] lg:w-[350px] h-[190px] rounded" />
+          <div key={`${work} ${index}`} className="w-full bg-slate-200 max-w-[500px] lg:w-[350px] h-[190px] rounded" />
         ))}
       </div>
     </Container>
