@@ -1,5 +1,6 @@
 import { Container } from "../../../../components/Layout/Container";
 import { Logo } from "../../../../components/Logo";
+import { socials } from "../../../../content/socials";
 import { useBreakpoints } from "../../../../hooks/useBreakpoints";
 import { Navigation } from "./components/Navigation";
 
@@ -13,15 +14,21 @@ export const Footer = () => {
           <Logo size="large" textColor="black" />
 
           <div className="mt-10 mb-15">
-            <div className="flex gap-4 mb-4">
-              <div className="w-9 h-9 rounded-full bg-slate-300" />
-              <div className="w-9 h-9 rounded-full bg-slate-300" />
-              <div className="w-9 h-9 rounded-full bg-slate-300" />
-              <div className="w-9 h-9 rounded-full bg-slate-300" />
-              <div className="w-9 h-9 rounded-full bg-slate-300" />
+            <div className="flex items-center gap-4 mb-4">
+              {socials.map(({url, icon}, index) => (
+                <a
+                  key={index}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  {icon}
+                </a>
+              ))}
             </div>
 
-            <a href="mailto:playcraftua@gmail.com" className="text-center lg:text-start">playcraftua@gmail.com</a>
+            <a href="mailto:playcraftua@gmail.com" className="flex justify-center lg:justify-start">playcraftua@gmail.com</a>
           </div>
         </div>
         {isLgScreen && (
