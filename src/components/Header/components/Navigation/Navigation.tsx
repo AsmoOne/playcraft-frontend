@@ -9,7 +9,7 @@ type PropsT = {
 
 export const Navigation = ({ isOpen }: PropsT) => {
   const baseNavigationClasses = 'gap-4 md:flex-row md:flex';
-  const baseOpenedClasses = 'flex flex-col items-center justify-center bg-[#6291A6] absolute top-0 left-0 right-0 bottom-0';
+  const baseOpenedClasses = 'flex flex-col items-center justify-center bg-[#6291A6] absolute top-0 left-0 right-0 bottom-0 h-svh';
 
   return (
     <div className={`${baseNavigationClasses} ${isOpen ? baseOpenedClasses : 'hidden'} md:bg-transparent md:static px-6`}>

@@ -14,6 +14,7 @@ export const Header = () => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       setIsHeaderFixed(scrollTop > 150);
+      setIsOpen(false);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,14 +27,16 @@ export const Header = () => {
   const toggleClick = () => setIsOpen(!isOpen);
 
   return (
-    <Container type="header" rootClassNames={`select-none bg-[rgba(0,0,0,0.4)] transition-all duration-300 ease-in-out backdrop-blur ${isHeaderFixed ? 'bg-[rgba(0,0,0,0.6)] fixed top-0 left-0 right-0 bg-[rgba(0,0,0,0.4)' : ''}`}>
-      <div className="flex justify-between py-10">
-        <Logo size="small" rootClassNames="z-10" />
+    <div className={`select-none transition-all duration-300 ease-in-out ${isHeaderFixed ? 'bg-[rgba(0,0,0,0.6)] fixed top-0 left-0 right-0 backdrop-blur' : ''}`}>
+      <Container type="header">
+        <div className="flex justify-between py-10">
+          <Logo size="small" rootClassNames="z-10" />
 
-        <Navigation isOpen={isOpen} />
+          <Navigation isOpen={isOpen} />
 
-        {!isMdScreen && <Burger onClick={toggleClick} isOpen={isOpen} />}
-      </div>
-    </Container>
+          {!isMdScreen && <Burger onClick={toggleClick} isOpen={isOpen} />}
+        </div>
+      </Container>
+    </div>
   );
 };

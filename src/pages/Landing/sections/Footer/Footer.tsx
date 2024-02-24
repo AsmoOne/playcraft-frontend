@@ -3,6 +3,7 @@ import { Logo } from "../../../../components/Logo";
 import { socials } from "../../../../content/socials";
 import { useBreakpoints } from "../../../../hooks/useBreakpoints";
 import { Navigation } from "./components/Navigation";
+import { NameT, SocialIcon } from "../../../../components/SocialIcon";
 
 export const Footer = () => {
   const { isLgScreen } = useBreakpoints();
@@ -23,7 +24,7 @@ export const Footer = () => {
                   rel="noreferrer"
                   className="flex items-center justify-center"
                 >
-                  {icon}
+                  {<SocialIcon name={icon as NameT} />}
                 </a>
               ))}
             </div>
