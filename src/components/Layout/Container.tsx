@@ -4,11 +4,12 @@ type PropsT = {
   children: ReactNode,
   rootClassNames?: string,
   type?: 'header' | 'footer' | 'aside',
+  onScroll?: (event: any) => void,
 };
 
-export const Container = ({ children, rootClassNames, type }: PropsT) => {
+export const Container = ({ children, rootClassNames, type, onScroll }: PropsT) => {
   if (type === 'header') return (
-    <header className={`${'container mx-auto'} ${rootClassNames}`}>
+    <header onScroll={onScroll} className={`${'container mx-auto'} ${rootClassNames}`}>
       { children }
     </header>
   )

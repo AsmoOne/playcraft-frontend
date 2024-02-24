@@ -6,7 +6,7 @@ type PropsT = {
   rootClassNames?: string,
 };
 
-const baseClassNames = 'flex items-center text-base text-white hover:text-primary transition-all';
+const baseClassNames = 'flex items-center text-lg text-white hover:text-primary transition-all';
 
 export const Link = ({
   children,
@@ -31,7 +31,7 @@ export const Link = ({
       { children }
 
       { withDropdown ? (
-        <img src="/assets/arrow_down.svg" alt="arrow down icon" />
+        <img src="/assets/arrow_down.svg" alt="arrow down icon" className="w-3"/>
       ) : null}
     </a>
   )

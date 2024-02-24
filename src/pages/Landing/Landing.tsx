@@ -10,7 +10,7 @@ import { Footer } from './sections/Footer';
 export const Landing = () => {
   return (
     <>
-      <div className='font-main bg-intro-background bg-bottom bg-cover h-svh overflow-hidden'>
+      <div className='font-main bg-intro-background bg-bottom bg-cover h-svh overflow-hidden flex flex-col'>
         <Header />
         <Intro />
       </div>
