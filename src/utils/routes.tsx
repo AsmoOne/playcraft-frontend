@@ -1,6 +1,7 @@
 import { About } from "../pages/About";
 import { Commands } from "../pages/Commands";
 import { Empty } from "../pages/Empty";
+import { FAQ } from "../pages/FAQ";
 import { Landing } from "../pages/Landing";
 import { Rules } from "../pages/Rules";
 
@@ -12,6 +13,7 @@ export const routes = [
   { path: Path.Commands, element: <Commands /> },
   { path: Path.About, element: <About /> },
   { path: Path.NotFound, element: <Empty /> },
+  { path: Path.FAQ, element: <FAQ /> },
 ];
 
 export const titles = {
@@ -19,6 +21,7 @@ export const titles = {
   [Path.Rules]: 'Правила',
   [Path.Commands]: 'Команди',
   [Path.About]: 'Про нас',
+  [Path.FAQ]: 'FAQ',
 }
 
 export const links = [
