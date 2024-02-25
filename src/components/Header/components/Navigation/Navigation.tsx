@@ -15,7 +15,7 @@ export const Navigation = ({ isOpen }: PropsT) => {
 
   const renderDropdownItems = (dropdownItems: any) => {
     return (
-      <Menu.Items className="absolute top-24 z-10 mt-1 w-56 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <Menu.Items className="absolute top-12 z-10 mt-1 w-56 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
         {dropdownItems.map(({ id, path, name }: any) => (
           <Menu.Item key={id}>
             {({ active }) => (
@@ -35,7 +35,7 @@ export const Navigation = ({ isOpen }: PropsT) => {
   return (
     <div className={`${baseNavigationClasses} ${isOpen ? baseOpenedClasses : 'hidden'} md:bg-transparent md:static px-6`}>
       {links.map(({ name, dropdownItems }, index) => (
-        <Menu as="div" className="flex" key={index}>
+        <Menu as="div" className="relative flex" key={index}>
           {({ open }) => (
             <>
               <Menu.Button className="block w-full px-4 py-2 text-base text-white bg-transparent border-0 rounded-md md:bg-transparent md:border-0 md:hover:bg-transparent md:hover:text-primary focus:outline-none">
