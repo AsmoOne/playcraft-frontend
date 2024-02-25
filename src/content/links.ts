@@ -1,68 +1,70 @@
+import { Path } from "../utils/enums";
+
 export const links: any = {
   'Інформація': {
     rules: {
       title: 'Правила',
-      url: '/rules',
+      url: Path.Rules,
     },
     teams: {
       title: 'Команди',
-      url: '/teams',
+      url: Path.Commands,
     },
     complaints: {
       title: 'Скарги',
-      url: '/complaints',
+      url: Path.Complaints,
     },
     faq: {
       title: 'FAQ',
-      url: '/faq',
+      url: Path.FAQ,
     },
     about: {
       title: 'Про нас',
-      url: '/about',
+      url: Path.About,
     },
     history: {
       title: 'Історія проекту',
-      url: '/history',
+      url: Path.History,
     },
     log: {
       title: 'Лог покарань',
-      url: '/log',
+      url: Path.PenaltyLog,
     },
     legends: {
       title: 'Легенди серверу',
-      url: '/legends',
+      url: Path.Legends,
     },
     referal: {
       title: 'Реферальна програма',
-      url: '/referal',
+      url: Path.ReferalProgram,
     },
     screenshots: {
       title: 'Скріншоти',
-      url: '/screenshots',
+      url: Path.Screenshots,
     }
   },
   'Магазин': {
     donate: {
       title: 'Донат',
-      url: '/donate',
+      url: Path.Donate,
     },
     premium: {
       title: 'Преміум',
-      url: '/premium',
+      url: Path.Premium,
     },
     chests: {
       title: 'Скрині',
-      url: '/chests',
+      url: Path.ChestShop,
     },
     pcm: {
       title: 'PCM',
-      url: '/pcm',
+      url: Path.PCM,
     },
   },
   'Мапа': {
     map: {
       title: 'Мапа сайту',
-      url: '/map',
+      url: Path.Map,
     },
   }
 }
