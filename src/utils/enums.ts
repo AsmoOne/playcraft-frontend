@@ -15,5 +15,4 @@ export enum Path {
   ChestShop = '/chest-shop',
   PCM = '/pcm',
   Map = '/map',
-  NotFound = '*',
 }

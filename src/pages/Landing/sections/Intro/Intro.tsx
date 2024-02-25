@@ -11,7 +11,7 @@ type PropsT = {
 
 export const Intro = ({
   isLanding,
-  title = 'Глобальне оновлення'
+  title = "Таку сторінку не знайдено :(",
 }: PropsT) => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
   const { isLgScreen } = useBreakpoints();
