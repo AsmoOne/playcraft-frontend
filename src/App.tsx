@@ -4,10 +4,7 @@ import { Header } from './components/Header';
 import { Intro } from './pages/Landing/sections/Intro';
 import { Footer } from './pages/Landing/sections/Footer';
 
-import { Empty } from './pages/Empty';
-import { Landing } from './pages/Landing';
-import { Rules } from './pages/Rules';
-import { Commands } from './pages/Commands';
+import { routes, titles } from './utils/routes';
 
 import './styles/index.css';
 
@@ -15,12 +12,6 @@ function App() {
   const location = useLocation();
 
   const isLanding = location.pathname === '/';
-
-  const titles = {
-    '/': 'Глобальне оновлення',
-    '/rules': 'Правила',
-    '/commands': 'Команди',
-  }
 
   return (
     <>
@@ -30,10 +21,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="*" element={<Empty />} />
-        <Route path="/rules" element={<Rules />} />
-        <Route path="/commands" element={<Commands />} />
+        {routes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
       </Routes>
 
       <Footer />
