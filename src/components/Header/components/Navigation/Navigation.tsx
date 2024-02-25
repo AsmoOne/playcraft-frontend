@@ -1,9 +1,10 @@
+import { Fragment } from 'react';
+
 import { Button } from '../../../Button';
 import { Link } from '../../../Link';
 import { Menu, Transition } from '@headlessui/react';
 
 import { links } from '../../../../utils/routes';
-import { Fragment } from 'react';
 
 type PropsT = {
   isOpen: boolean;
