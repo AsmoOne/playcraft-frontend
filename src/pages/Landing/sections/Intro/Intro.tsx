@@ -3,6 +3,8 @@ import { Button } from "../../../../components/Button"
 import { Container } from "../../../../components/Layout/Container"
 import { useBreakpoints } from "../../../../hooks/useBreakpoints";
 import { STYLES } from "../../../../utils/constants";
+import { useNavigate } from "react-router-dom";
+import { Path } from "../../../../utils/enums";
 
 type PropsT = {
   isLanding?: boolean;
@@ -14,6 +16,7 @@ export const Intro = ({
   title = "Таку сторінку не знайдено :(",
 }: PropsT) => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+  const navigate = useNavigate();
   const { isLgScreen } = useBreakpoints();
 
   useEffect(() => {
@@ -29,6 +32,8 @@ export const Intro = ({
     };
   }, []);
 
+  const handleNavigate = () => navigate(Path.Start);
+
   return (
     <Container rootClassNames={`${'lg:flex lg:justify-between items-center gap-10 h-full'} ${isHeaderFixed && 'mt-[130px]'}`}>
       <div className={`${isLanding ? 'w-auto' : 'w-full mt-52'} text-white md:mt-24 lg:mt-0`}>
@@ -37,7 +42,11 @@ export const Intro = ({
           <>
             <p className="text-2xl mb-[190px] md:mb-8 leading-tight">Якийсь коротенький текст для уточнення</p>
 
-            <Button variant="primary" rootClassNames="w-full md:w-auto">
+            <Button
+              variant="primary"
+              rootClassNames="w-full md:w-auto"
+              onClick={handleNavigate}
+            >
               Почати грати
             </Button>
           </>

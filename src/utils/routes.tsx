@@ -3,11 +3,13 @@ import { Commands } from "../pages/Commands";
 import { FAQ } from "../pages/FAQ";
 import { Landing } from "../pages/Landing";
 import { Rules } from "../pages/Rules";
+import { Start } from "../pages/Start";
 
 import { Path } from "./enums";
 
 export const routes = [
   { path: Path.Home, element: <Landing /> },
+  { path: Path.Start, element: <Start /> },
   { path: Path.Rules, element: <Rules /> },
   { path: Path.Commands, element: <Commands /> },
   { path: Path.About, element: <About /> },
@@ -16,6 +18,7 @@ export const routes = [
 
 export const titles = {
   [Path.Home]: 'Глобальне оновлення',
+  [Path.Start]: 'Як почати грати?',
   [Path.Rules]: 'Правила',
   [Path.Commands]: 'Команди',
   [Path.About]: 'Про нас',
