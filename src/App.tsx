@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+
 import { Header } from './components/Header';
 import { Intro } from './pages/Landing/sections/Intro';
 import { Footer } from './pages/Landing/sections/Footer';
@@ -6,6 +7,7 @@ import { Footer } from './pages/Landing/sections/Footer';
 import { Empty } from './pages/Empty';
 import { Landing } from './pages/Landing';
 import { Rules } from './pages/Rules';
+import { Commands } from './pages/Commands';
 
 import './styles/index.css';
 
@@ -16,7 +18,8 @@ function App() {
 
   const titles = {
     '/': 'Глобальне оновлення',
-    '/rules': 'Правила'
+    '/rules': 'Правила',
+    '/commands': 'Команди',
   }
 
   return (
@@ -28,8 +31,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="*" element={<Empty/>} />
-        <Route path="/rules" element={<Rules/>} />
+        <Route path="*" element={<Empty />} />
+        <Route path="/rules" element={<Rules />} />
+        <Route path="/commands" element={<Commands />} />
       </Routes>
 
       <Footer />
