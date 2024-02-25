@@ -31,7 +31,7 @@ export const Intro = ({
 
   return (
     <Container rootClassNames={`${'lg:flex lg:justify-between items-center gap-10 h-full'} ${isHeaderFixed && 'mt-[130px]'}`}>
-      <div className={`${isLanding ? 'w-auto' : 'w-full'} text-white md:mt-24 lg:mt-0`}>
+      <div className={`${isLanding ? 'w-auto' : 'w-full mt-52'} text-white md:mt-24 lg:mt-0`}>
         <h1 className={`${STYLES.H1} leading-[0.65] mb-4 ${!isLanding && 'text-center'}`}>{title}</h1>
         {isLanding && (
           <>
