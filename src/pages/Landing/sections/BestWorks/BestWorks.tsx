@@ -1,4 +1,5 @@
 import { Container } from "../../../../components/Layout/Container"
+import { STYLES } from "../../../../utils/constants"
 
 export const BestWorks = () => {
   const works = [
@@ -38,9 +39,10 @@ export const BestWorks = () => {
       },
     },
   ]
+
   return (
     <Container rootClassNames="pt-20">
-      <h2 className="text-h2-mobile font-main mb-7 md:mb-10 md:text-h2-desktop">
+      <h2 className={`${STYLES.H2} mb-7 md:mb-10`}>
         Найкращі роботи
       </h2>
 

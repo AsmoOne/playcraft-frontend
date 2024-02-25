@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "../../../../components/Button"
 import { Container } from "../../../../components/Layout/Container"
 import { useBreakpoints } from "../../../../hooks/useBreakpoints";
+import { STYLES } from "../../../../utils/constants";
 
 type PropsT = {
   isLanding?: boolean;
@@ -31,7 +32,7 @@ export const Intro = ({
   return (
     <Container rootClassNames={`${'lg:flex lg:justify-between items-center gap-10 h-full'} ${isHeaderFixed && 'mt-[130px]'}`}>
       <div className={`${isLanding ? 'w-auto' : 'w-full'} text-white md:mt-24 lg:mt-0`}>
-        <h1 className={`text-h1-mobile leading-[0.65] lg:text-h1-desktop mb-4 ${!isLanding && 'text-center'}`}>{title}</h1>
+        <h1 className={`${STYLES.H1} leading-[0.65] mb-4 ${!isLanding && 'text-center'}`}>{title}</h1>
         {isLanding && (
           <>
             <p className="text-2xl mb-[190px] md:mb-8 leading-tight">Якийсь коротенький текст для уточнення</p>

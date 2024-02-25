@@ -1,5 +1,6 @@
 import { Container } from "../../../../components/Layout/Container"
 import { Player } from "../../../../components/Player"
+import { STYLES } from "../../../../utils/constants"
 
 type PropsT = {
   rootClassNames?: string,
@@ -33,7 +34,7 @@ export const Players = ({ rootClassNames, title }: PropsT) => {
 
   return (
     <Container type="aside" rootClassNames={`${rootClassNames}`}>
-      <h2 className="text-h2-mobile font-main mb-7 md:mb-10 md:text-h2-desktop">
+      <h2 className={`${STYLES.H2} mb-7 md:mb-10`}>
         {title}
       </h2>
 

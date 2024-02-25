@@ -12,7 +12,7 @@ export const Footer = () => {
     <Container type="footer" rootClassNames="flex flex-col lg:flex-row justify-between my-20 gap-20">
       <div className="flex flex-col justify-between items-center lg:items-start">
         <div className="">
-          <Logo size="large" textColor="black" />
+          <Logo size="large" />
 
           <div className="mt-10 mb-15">
             <div className="flex items-center gap-4 mb-4">
