@@ -1,5 +1,6 @@
 export enum Path {
   Home = '/',
+  Start = '/start',
   Rules = '/rules',
   Commands = '/commands',
   Complaints = '/complaints',

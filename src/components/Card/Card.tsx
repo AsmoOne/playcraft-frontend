@@ -8,7 +8,7 @@ type PropsT = {
 
 export const Card = ({ children, className, id }: PropsT) => {
   return (
-    <div id={id} className={`px-5 py-10 shadow ${className}`}>
+    <div id={id} className={`px-5 py-10 shadow rounded ${className}`}>
       { children }
     </div>
   )
