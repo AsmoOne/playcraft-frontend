@@ -5,17 +5,18 @@ import { Intro } from './pages/Landing/sections/Intro';
 import { Footer } from './pages/Landing/sections/Footer';
 
 import { routes, titles } from './utils/routes';
+import { Path } from './utils/enums';
 
 import './styles/index.css';
 
 function App() {
   const location = useLocation();
 
-  const isLanding = location.pathname === '/';
+  const isLanding = location.pathname === Path.Home;
 
   return (
     <>
-      <div className='font-main bg-intro-background bg-bottom bg-cover h-svh overflow-hidden flex flex-col'>
+      <div className={'font-main bg-intro-background bg-bottom bg-cover h-svh overflow-hidden flex flex-col'}>
         <Header />
         <Intro isLanding={isLanding} title={titles[location.pathname as keyof typeof titles]} />
       </div>
