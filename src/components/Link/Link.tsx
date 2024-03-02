@@ -1,3 +1,5 @@
+import { Link as ReactLink } from 'react-router-dom';
+
 type PropsT = {
   children: React.ReactNode,
   to: string,
@@ -18,8 +20,8 @@ export const Link = ({
  }: PropsT) => {
 
   return (
-    <a
-      href={to}
+    <ReactLink
+      to={to}
       target={target}
       className={`
         ${baseClassNames}
@@ -33,6 +35,6 @@ export const Link = ({
       { withDropdown ? (
         <img src="/assets/arrow_down.svg" alt="arrow down icon" className="w-3"/>
       ) : null}
-    </a>
+    </ReactLink>
   )
 }

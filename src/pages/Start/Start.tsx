@@ -24,9 +24,9 @@ export const Start = () => {
         <p className="font-main text-2xl mb-2 sm:mb-0">3. Завантажити Лаунчер</p>
 
         <div className="flex gap-5 items-center flex-wrap">
-          <Button variant="primary">Реєстрація</Button>
+          <Button variant="primary">playCraft.exe</Button>
           <p>або</p>
-          <Button variant="primary">Реєстрація</Button>
+          <Button variant="primary">playCraft.jar</Button>
         </div>
       </Card>
     </Container>

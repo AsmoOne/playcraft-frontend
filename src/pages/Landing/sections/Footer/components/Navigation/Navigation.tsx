@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { links } from "../../../../../../content/links";
 
 export const Navigation = () => {
@@ -16,9 +17,9 @@ export const Navigation = () => {
               <ul className={`${'grid gap-4 text-lg'} ${gridStyles}`}>
                 {Object.keys(linkGroup).map((subKey) => (
                   <li key={subKey}>
-                    <a href={linkGroup[subKey].url}>
+                    <Link to={linkGroup[subKey].url}>
                       {linkGroup[subKey].title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
