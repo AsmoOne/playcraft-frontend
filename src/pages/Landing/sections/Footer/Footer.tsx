@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Container } from "../../../../components/Layout/Container";
 import { Logo } from "../../../../components/Logo";
 import { socials } from "../../../../content/socials";
@@ -17,15 +19,15 @@ export const Footer = () => {
           <div className="mt-10 mb-15">
             <div className="flex items-center gap-4 mb-4">
               {socials.map(({url, icon}, index) => (
-                <a
+                <Link
                   key={index}
-                  href={url}
+                  to={url}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center"
                 >
                   {<SocialIcon name={icon as NameT} />}
-                </a>
+                </Link>
               ))}
             </div>
 
