@@ -4,6 +4,7 @@ import { FAQ } from "../pages/FAQ";
 import { Landing } from "../pages/Landing";
 import { Rules } from "../pages/Rules";
 import { Start } from "../pages/Start";
+import { Premium } from "../pages/Premium";
 
 import { Path } from "./enums";
 
@@ -14,6 +15,7 @@ export const routes = [
   { path: Path.Commands, element: <Commands /> },
   { path: Path.About, element: <About /> },
   { path: Path.FAQ, element: <FAQ /> },
+  { path: Path.Premium, element: <Premium /> },
 ];
 
 export const titles = {
@@ -23,6 +25,7 @@ export const titles = {
   [Path.Commands]: 'Команди',
   [Path.About]: 'Про нас',
   [Path.FAQ]: 'FAQ',
+  [Path.Premium]: 'Преміум',
 }
 
 export const links = [
