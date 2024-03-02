@@ -11,31 +11,45 @@ export const Footer = () => {
   const { isLgScreen } = useBreakpoints();
 
   return (
-    <Container type="footer" rootClassNames="flex flex-col lg:flex-row justify-between my-20 gap-20">
-      <div className="flex flex-col justify-between items-center lg:items-start">
-        <div className="">
-          <Logo size="large" />
+    <Container type="footer" rootClassNames="my-20 relative">
+      <section className="flex flex-col lg:flex-row justify-between gap-20">
 
-          <div className="mt-10 mb-15">
-            <div className="flex items-center gap-4 mb-4">
-              {socials.map(({url, icon}, index) => (
-                <Link
-                  key={index}
-                  to={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-center"
-                >
-                  {<SocialIcon name={icon as NameT} />}
-                </Link>
-              ))}
+        <div className="flex flex-col justify-between items-center lg:items-start">
+          <div className="">
+            <Logo size="large" />
+
+            <div className="mt-10 mb-15">
+              <div className="flex items-center gap-4 mb-4">
+                {socials.map(({url, icon}, index) => (
+                  <Link
+                    key={index}
+                    to={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center"
+                  >
+                    {<SocialIcon name={icon as NameT} />}
+                  </Link>
+                ))}
+              </div>
+
+              <a href="mailto:playcraftua@gmail.com" className="flex justify-center lg:justify-start">playcraftua@gmail.com</a>
             </div>
-
-            <a href="mailto:playcraftua@gmail.com" className="flex justify-center lg:justify-start">playcraftua@gmail.com</a>
           </div>
+          {isLgScreen && (
+            <div>
+              <div className="flex flex-col mb-8">
+                <a href="#">Політика конфіденційності</a>
+                <a href="#">Договір публічної оферти</a>
+              </div>
+              <span>All rights reserved © 2012-2024</span>
+            </div>
+          )}
         </div>
-        {isLgScreen && (
-          <div>
+
+        <Navigation />
+        {!isLgScreen && (
+          <div className="mt-15 text-center">
             <div className="flex flex-col mb-8">
               <a href="#">Політика конфіденційності</a>
               <a href="#">Договір публічної оферти</a>
@@ -43,18 +57,9 @@ export const Footer = () => {
             <span>All rights reserved © 2012-2024</span>
           </div>
         )}
-      </div>
+      </section>
 
-      <Navigation />
-      {!isLgScreen && (
-        <div className="mt-15 text-center">
-          <div className="flex flex-col mb-8">
-            <a href="#">Політика конфіденційності</a>
-            <a href="#">Договір публічної оферти</a>
-          </div>
-          <span>All rights reserved © 2012-2024</span>
-        </div>
-      )}
+      <p className="lg:absolute text-center bottom-[20px] right-[120px] md:text-end">З любов'ю, PlayCraft {'<3'}</p>
     </Container>
   )
 }
