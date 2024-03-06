@@ -60,35 +60,21 @@ export const sections = [
     type: 'helper',
     players: [
       {
-        name: 'Kuzia666',
+        name: 'TriXter',
         role: ''
       },
       {
-        name: 'Mik787',
+        name: 'Pain',
         role: ''
       },
       {
-        name: 'Pad0n',
+        name: 'MalDeRoK',
         role: ''
       },
+      {
+        name: 'artem123',
+        role: ''
+      }
     ]
   },
-  {
-    title: 'Внесли вагомий внесок',
-    type: 'valuable',
-    players: [
-      {
-        name: 'Kuzia666',
-        role: ''
-      },
-      {
-        name: 'Mik787',
-        role: ''
-      },
-      {
-        name: 'Pad0n',
-        role: ''
-      },
-    ]
-  }
 ]
