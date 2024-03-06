@@ -1,8 +1,9 @@
 import { Fragment } from 'react';
+import { Menu, Transition } from '@headlessui/react';
 
 import { Button } from '../../../Button';
 import { Link } from '../../../Link';
-import { Menu, Transition } from '@headlessui/react';
+import { Arrow } from '../../../Arrow';
 
 import { links } from '../../../../utils/routes';
 
@@ -11,7 +12,7 @@ type PropsT = {
 };
 
 export const Navigation = ({ isOpen }: PropsT) => {
-  const baseNavigationClasses = 'gap-4 md:flex-row md:flex';
+  const baseNavigationClasses = 'gap-2 md:flex-row md:flex';
   const baseOpenedClasses = 'flex flex-col items-center justify-center bg-[#6291A6] absolute top-0 left-0 right-0 bottom-0 h-svh';
 
   const renderDropdownItems = (dropdownItems: any) => {
@@ -39,9 +40,11 @@ export const Navigation = ({ isOpen }: PropsT) => {
         <Menu as="div" className="relative flex" key={index}>
           {({ open }) => (
             <>
-              <Menu.Button className="block w-full px-4 py-2 text-base text-white bg-transparent border-0 rounded-md md:bg-transparent md:border-0 md:hover:bg-transparent md:hover:text-primary focus:outline-none">
-                {name}
+              <Menu.Button className="flex items-center gap-2 w-full px-4 py-2 text-base text-white bg-transparent border-0 rounded-md md:bg-transparent md:border-0 md:hover:bg-transparent md:hover:text-primary focus:outline-none">
+                <span>{name}</span>
+                {dropdownItems && <Arrow color='white' />}
               </Menu.Button>
+
               {dropdownItems && (
                 <Transition
                   show={open}

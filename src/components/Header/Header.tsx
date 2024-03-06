@@ -29,7 +29,7 @@ export const Header = () => {
   return (
     <div className={`select-none transition-all duration-300 ease-in-out ${isHeaderFixed ? 'bg-[rgba(0,0,0,0.6)] fixed top-0 left-0 right-0 backdrop-blur z-10' : ''}`}>
       <Container type="header">
-        <div className="flex justify-between py-10">
+        <div className="flex justify-between py-6">
           <Logo size="small" rootClassNames="z-10" />
 
           <Navigation isOpen={isOpen} />

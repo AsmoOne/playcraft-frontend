@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { STYLES } from "../../utils/constants";
+import { Arrow } from "../Arrow";
 
 type AccordionItemHeadingPropsT = {
   id: string;
@@ -10,12 +11,14 @@ type AccordionItemHeadingPropsT = {
 
 const AccordionItemHeading = ({ id, title, onClick }: AccordionItemHeadingPropsT) => {
   return (
-    <button className="mb-0 px-5 py-5 shadow w-full rounded" id={id} onClick={onClick}>
+    <button className="flex items-center mb-0 px-5 py-5 shadow w-full rounded" id={id} onClick={onClick}>
       <div
         className="relative flex items-center w-full h-full font-semibold text-xl text-left transition-all ease-in cursor-pointer rounded-t-1"
       >
         <span>{title}</span>
       </div>
+
+      <Arrow color="black" />
     </button>
   );
 };
