@@ -6,15 +6,23 @@ export const Timer = () => {
     </div>
   );
 
-  const startDate = new Date(2012, 3, 0);
+  const startDate = new Date(2012, 3, 1);
   const currentDate = new Date();
 
-  const difference = currentDate.getTime() - startDate.getTime();
-  const allDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const allMonths = Math.floor(allDays / 30);
-  const years = Math.floor(allMonths / 12);
-  const days = allDays % 30;
-  const months = allMonths % 12;
+  let years = currentDate.getFullYear() - startDate.getFullYear();
+  let months = currentDate.getMonth() - startDate.getMonth();
+  let days = currentDate.getDate() - startDate.getDate();
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  if (days < 0) {
+    months -= 1;
+    const tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+    days = tempDate.getDate() - startDate.getDate() + currentDate.getDate()
+  }
 
   const yearSuffixes = {
     one: "рік",
