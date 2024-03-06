@@ -38,24 +38,6 @@ export const sections = [
     ]
   },
   {
-    title: 'Модератори',
-    type: 'moderator',
-    players: [
-      {
-        name: 'Maksel',
-        role: ''
-      },
-      {
-        name: 'Savage_Did',
-        role: ''
-      },
-      {
-        name: 'Gmr',
-        role: ''
-      },
-    ]
-  },
-  {
     title: 'Хелпери',
     type: 'helper',
     players: [

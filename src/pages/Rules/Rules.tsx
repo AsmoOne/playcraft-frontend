@@ -11,7 +11,7 @@ export const Rules = () => {
           {indexT !== ruleList.length - 2 && <h2 className="mb-10 mt-20 text-h2-mobile md:text-h2-desktop font-main">{`${indexT !== ruleList.length - 1 && indexT !== ruleList.length - 2 ? `${indexT + 1}.` : ''} ${ruleSection.title}`}</h2>}
 
           {ruleSection.rules.map((rule, indexR) => (
-            <div className={`px-5 py-10 shadow rounded w-auto mb-4 text-xl font-semibold leading-normal`} key={`${indexR}-${rule.charAt(0)}`}>
+            <div className={`px-5 py-3 shadow rounded w-auto mb-4 text-xl font-semibold leading-normal bg-slate-50`} key={`${indexR}-${rule.charAt(0)}`}>
               {`${indexT !== ruleList.length - 1 && indexT !== ruleList.length - 2 ? `${indexT + 1}.${indexR + 1}.` : ''} ${rule}`}
             </div>
           ))}

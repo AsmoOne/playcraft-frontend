@@ -59,7 +59,7 @@ export const Footer = () => {
         )}
       </section>
 
-      <p className="lg:absolute text-center bottom-[20px] right-[120px] md:text-end">З любов'ю, PlayCraft {'<3'}</p>
+      <p className="lg:absolute text-center bottom-0 right-[120px] md:text-end">З любов'ю, PlayCraft {'<3'}</p>
     </Container>
   )
 }

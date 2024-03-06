@@ -6,7 +6,7 @@ export const Timer = () => {
     </div>
   );
 
-  const startDate = new Date(2012, 0, 8);
+  const startDate = new Date(2012, 3, 0);
   const currentDate = new Date();
 
   const difference = currentDate.getTime() - startDate.getTime();
