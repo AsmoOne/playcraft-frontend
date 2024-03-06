@@ -9,8 +9,8 @@ type PropsT = {
 export const AdminCard = ({ name, position, type }: PropsT) => {
   const typeStyles = {
     admin: 'border-[#AA0000]',
-    moderator: 'boder-[#FF5555]',
-    helper: 'boder-[#5555FF]',
+    moderator: 'border-[#FF5555]',
+    helper: 'border-[#5555FF]',
     valuable: 'border-[#FFAA00]',
   }
 
