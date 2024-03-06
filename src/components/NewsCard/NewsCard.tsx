@@ -1,6 +1,6 @@
 export const NewsCard = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between w-full h-auto md:h-[280px] max-w-[680px] shadow rounded">
+    <div className="flex flex-col-reverse md:flex-row justify-between w-full h-auto md:h-[280px] shadow rounded">
       <div className="flex flex-col justify-between px-6 py-5 w-full max-w-[340px]">
         <div>
           <h3 className="text-h3-mobile md:text-h3-desktop mb-3 font-semibold">Заголовок новини</h3>

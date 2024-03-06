@@ -18,7 +18,7 @@ export const Rules = () => {
         </Fragment>
       ))}
 
-      <p className="text-lg text-right mt-15 mb-28">Останні зміни в правилах: 22.10.2022</p>
+      <p className="text-lg text-right mt-15 mb-28">Останні зміни в правилах: 14.03.2024</p>
     </Container>
   )
 }
