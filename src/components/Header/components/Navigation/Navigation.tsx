@@ -1,10 +1,12 @@
 import { Fragment } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 
 import { Button } from '../../../Button';
 import { Link } from '../../../Link';
 import { Arrow } from '../../../Arrow';
 
+import { Path } from '../../../../utils/enums';
 import { links } from '../../../../utils/routes';
 
 type PropsT = {
@@ -14,6 +16,7 @@ type PropsT = {
 export const Navigation = ({ isOpen }: PropsT) => {
   const baseNavigationClasses = 'gap-2 md:flex-row md:flex';
   const baseOpenedClasses = 'flex flex-col items-center justify-center bg-[#6291A6] absolute top-0 left-0 right-0 bottom-0 h-svh';
+  const navigate = useNavigate();
 
   const renderDropdownItems = (dropdownItems: any) => {
     return (
@@ -33,6 +36,10 @@ export const Navigation = ({ isOpen }: PropsT) => {
       </Menu.Items>
     );
   };
+
+  const handleLogin = () => {
+    navigate(Path.Personal)
+  }
 
   return (
     <div className={`${baseNavigationClasses} ${isOpen ? baseOpenedClasses : 'hidden'} md:bg-transparent md:static px-6`}>
@@ -64,7 +71,13 @@ export const Navigation = ({ isOpen }: PropsT) => {
         </Menu>
       ))}
 
-      <Button variant="primary" rootClassNames='w-full max-w-md mt-10 md:mt-0 md:w-auto md:ml-4 lg:ml-15'>Вхід</Button>
+      <Button
+        variant="primary"
+        rootClassNames='w-full max-w-md mt-10 md:mt-0 md:w-auto md:ml-4 lg:ml-15'
+        onClick={handleLogin}
+      >
+        Вхід
+      </Button>
     </div>
   )
 }

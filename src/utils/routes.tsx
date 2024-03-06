@@ -9,6 +9,7 @@ import { Legends } from "../pages/Legends";
 import { Screenshots } from "../pages/Screenshots";
 
 import { Path } from "./enums";
+import { Personal } from "../pages/Personal";
 
 export const routes = [
   { path: Path.Home, element: <Landing /> },
@@ -20,6 +21,7 @@ export const routes = [
   { path: Path.Premium, element: <Premium /> },
   { path: Path.Legends, element: <Legends /> },
   { path: Path.Screenshots, element: <Screenshots /> },
+  { path: Path.Personal, element: <Personal /> },
 ];
 
 export const titles = {
@@ -32,6 +34,7 @@ export const titles = {
   [Path.Premium]: 'Преміум',
   [Path.Legends]: 'Легенди серверу',
   [Path.Screenshots]: 'Кращі роботи',
+  [Path.Personal]: 'Особистий кабінет',
 }
 
 export const links = [
