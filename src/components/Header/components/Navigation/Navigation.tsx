@@ -8,6 +8,7 @@ import { Arrow } from '../../../Arrow';
 
 import { Path } from '../../../../utils/enums';
 import { links } from '../../../../utils/routes';
+import { Label } from '../../../Label';
 
 type PropsT = {
   isOpen: boolean;
@@ -20,8 +21,8 @@ export const Navigation = ({ isOpen }: PropsT) => {
 
   const renderDropdownItems = (dropdownItems: any) => {
     return (
-      <Menu.Items className="absolute top-12 z-10 mt-1 w-56 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-        {dropdownItems.map(({ id, path, name }: any) => (
+      <Menu.Items className="absolute top-12 z-10 mt-1 w-56 xl:w-72 bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        {dropdownItems.map(({ id, path, name, inDevelopment }: any) => (
           <Menu.Item key={id}>
             {({ active }) => (
               <Link
@@ -29,6 +30,7 @@ export const Navigation = ({ isOpen }: PropsT) => {
                 rootClassNames={`${active ? 'bg-gray-100' : ''} block px-4 py-2 text-sm text-gray-700`}
               >
                 {name}
+                {inDevelopment && <Label text='В розробці' className='absolute right-1'/>}
               </Link>
             )}
           </Menu.Item>

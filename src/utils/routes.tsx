@@ -56,6 +56,7 @@ export const links = [
         id: 3,
         name: 'Скарги',
         path: Path.Complaints,
+        inDevelopment: true,
       },
       {
         id: 4,
@@ -71,11 +72,13 @@ export const links = [
         id: 6,
         name: 'Історія проекту',
         path: Path.History,
+        inDevelopment: true,
       },
       {
         id: 7,
         name: 'Лог покарань',
         path: Path.PenaltyLog,
+        inDevelopment: true,
       },
       {
         id: 8,
@@ -86,6 +89,7 @@ export const links = [
         id: 9,
         name: 'Реферальна програма',
         path: Path.ReferalProgram,
+        inDevelopment: true,
       },
       {
         id: 10,
@@ -102,6 +106,7 @@ export const links = [
         id: 1,
         name: 'Донат',
         path: Path.Donate,
+        inDevelopment: true,
       },
       {
         id: 2,
@@ -112,11 +117,13 @@ export const links = [
         id: 3,
         name: 'Скрині',
         path: Path.ChestShop,
+        inDevelopment: true,
       },
       {
         id: 4,
         name: 'РСМ',
         path: Path.PCM,
+        inDevelopment: true,
       }
     ]
   },
@@ -128,6 +135,7 @@ export const links = [
         id: 1,
         name: 'Мапа',
         path: Path.Map,
+        inDevelopment: true,
       }
     ]
   },
