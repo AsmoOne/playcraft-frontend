@@ -5,7 +5,7 @@ import { STYLES } from "../../../../utils/constants";
 
 export const News = () => {
   return (
-    <section className="-mt-15 md:mt-0 w-full max-w-[680px]">
+    <section className="-mt-15 md:mt-0 w-full max-w-[800px]">
       <h2 className={`${STYLES.H2} mb-7 md:mb-10`}>
         Останні новини
       </h2>
