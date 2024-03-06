@@ -6,6 +6,7 @@ import { Rules } from "../pages/Rules";
 import { Start } from "../pages/Start";
 import { Premium } from "../pages/Premium";
 import { Legends } from "../pages/Legends";
+import { Screenshots } from "../pages/Screenshots";
 
 import { Path } from "./enums";
 
@@ -17,7 +18,8 @@ export const routes = [
   { path: Path.About, element: <About /> },
   { path: Path.FAQ, element: <FAQ /> },
   { path: Path.Premium, element: <Premium /> },
-  { path: Path.Legends, element: <Legends />},
+  { path: Path.Legends, element: <Legends /> },
+  { path: Path.Screenshots, element: <Screenshots /> },
 ];
 
 export const titles = {
@@ -29,6 +31,7 @@ export const titles = {
   [Path.FAQ]: 'FAQ',
   [Path.Premium]: 'Преміум',
   [Path.Legends]: 'Легенди серверу',
+  [Path.Screenshots]: 'Кращі роботи',
 }
 
 export const links = [

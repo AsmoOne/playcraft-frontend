@@ -1,44 +1,11 @@
-import { Container } from "../../../../components/Layout/Container"
-import { STYLES } from "../../../../utils/constants"
+import { Container } from "../../../../components/Layout/Container";
+import { MemoizedScreenshotCard } from "../../../../components/ScreenshotCard";
+
+import { STYLES } from "../../../../utils/constants";
+import { works } from "../../../Screenshots/works";
 
 export const BestWorks = () => {
-  const works = [
-    {
-      author: 'Work 1',
-      image: {
-        src: 'https://via.placeholder.com/150',
-        alt: 'Work 1',
-      },
-    },
-    {
-      author: 'Work 2',
-      image: {
-        src: 'https://via.placeholder.com/150',
-        alt: 'Work 2',
-      },
-    },
-    {
-      author: 'Work 3',
-      image: {
-        src: 'https://via.placeholder.com/150',
-        alt: 'Work 3',
-      },
-    },
-    {
-      author: 'Work 3',
-      image: {
-        src: 'https://via.placeholder.com/150',
-        alt: 'Work 3',
-      },
-    },
-    {
-      author: 'Work 3',
-      image: {
-        src: 'https://via.placeholder.com/150',
-        alt: 'Work 3',
-      },
-    },
-  ]
+  const lastWorks = works.slice(0, 5);
 
   return (
     <Container rootClassNames="pt-20">
@@ -47,8 +14,8 @@ export const BestWorks = () => {
       </h2>
 
       <div className="flex flex-wrap gap-16 lg:justify-center">
-        {works.map((work, index) => (
-          <div key={`${work} ${index}`} className="w-full bg-slate-200 max-w-[500px] lg:w-[350px] h-[190px] rounded" />
+        {lastWorks.map((work, index) => (
+          <MemoizedScreenshotCard key={`${index}-${work.url}`} work={work} index={index} />
         ))}
       </div>
     </Container>
