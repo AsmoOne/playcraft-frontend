@@ -18,7 +18,7 @@ And run the development server:
 pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:5173) with your browser to see the result.
 
 ## Code & Git conventions
 
@@ -51,7 +51,7 @@ You should messaging commits in the next pattern:
 This project based on next libraries:
  - [React](https://reactjs.org/)
  - [TypeScript](https://www.typescriptlang.org/)
- - [TailwindCSS]([https://sass-lang.com/](https://tailwindcss.com/))
+ - [TailwindCSS](https://tailwindcss.com/)
 
 ## React
 
@@ -65,14 +65,14 @@ We are using Vite template of Project Structure with some changes to make develo
 
  - `public`
  - `src`
- ---`api`
- ---`assets`
- ---`components`
- ---`content`
- ---`context`
- ---`hooks`
- ---`pages`
- ---`styles`
+ - --`api`
+ - --`assets`
+ - --`components`
+ - --`content`
+ - --`context`
+ - --`hooks`
+ - --`pages`
+ - --`styles`
  
 ### Functional Components
 
@@ -90,7 +90,7 @@ We using hooks to provide some additional functionality to components, such as s
 
 ### Styles Management
 
-- [TailwindCSS DOCS]([https://sass-lang.com/](https://tailwindcss.com/))
+- [TailwindCSS DOCS](https://tailwindcss.com/)
 - [TailwindCSS Vite Support](https://tailwindcss.com/docs/guides/vite)
 
 
