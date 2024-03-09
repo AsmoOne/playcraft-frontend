@@ -1,6 +1,7 @@
 This is a [PlayCraft](https://develop--friendly-liger-e2f2a2.netlify.app/) project bootstrapped with [`Vite`](https://vitejs.dev/).
 
 ## Getting Started
+First of all, you need to install [Node.js](https://nodejs.org/en/download), if you already installed it, let's move to the next step.
 
 First, install `pnpm` package manager that we are using:
 ```bash
